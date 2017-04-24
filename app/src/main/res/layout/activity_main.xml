@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.me.perevodchick.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+
+            tools:layout_width="match_parent">
+
+            <Spinner
+                android:id="@+id/fromlang"
+                style="@style/Platform.Widget.AppCompat.Spinner"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:spinnerMode="dialog"
+                android:minHeight="50dp"
+
+                android:soundEffectsEnabled="true" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="5dp"
+                android:contentDescription="@string/languagedirection"
+                android:onClick="invertLang"
+                app:srcCompat="@drawable/swap_horizontal" />
+
+
+            <Spinner
+                android:id="@+id/tolang"
+                style="@style/Platform.Widget.AppCompat.Spinner"
+                android:layout_width="150dp"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="50dp"
+                android:spinnerMode="dialog"
+                android:soundEffectsEnabled="true"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:hint="@string/edittexthint"
+            android:inputType="textCapSentences|textMultiLine"
+
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:scrollHorizontally="false" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/cardview_light_background"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:onClick="getTranslation"
+            android:text="@string/translateButton" />
+
+
+        <android.support.v7.widget.CardView
+
+            android:id="@+id/card_view"
+            style="@style/MyCardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:minHeight="125dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="298dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:gravity="center_vertical"
+                android:hint="@string/hint"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/addtofavoritebutton"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_gravity="end"
+                android:background="@drawable/ic_star_border_black_24dp"
+                android:onClick="setToFavorite" />
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+</LinearLayout>

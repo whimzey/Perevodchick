@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Perevodchick</string>
+    <string name="title_home">Перевод</string>
+    <string name="title_history">История</string>
+    <string name="title_favorite">Избранное</string>
+    <string name="languagedirection">LanguageDirection</string>
+    <string name="translateButton">Перевести!</string>
+    <string name="hint">Здесь будет перевод</string>
+    <string name="edittexthint">Введите текст</string>
+    <string name="clearfav">Очистить избранное</string>
+    <string name="clearhist">Очистить историю</string>
+</resources>
